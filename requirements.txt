@@ -1,0 +1,16 @@
+matplotlib
+simplejson
+scipy
+numpy
+hmmlearn
+eyeD3
+pydub
+scikit_learn
+tqdm
+plotly
+pandas
+imblearn
+scikit-image
+sklearn
+eyed3
+pyAudioAnalysis
