@@ -11,6 +11,5 @@ plotly
 pandas
 imblearn
 scikit-image
-sklearn
 eyed3
 pyAudioAnalysis
