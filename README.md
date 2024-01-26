@@ -1,14 +1,15 @@
-# SpeechGenderRecognition
+# Gender-recognisition-voice
 
-This is project allows to recognize from a wav file the gender of who speak.
+This project uses multiple machine learning models to recognize the gender of a speaker from a .wav audio file. It analyzes 14 individual traits of human voice to make the prediction.
 
-To install the project locally, read the follows instructions.
+## Getting Started
 
-## Requirements
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-- Python3
+### Prerequisites
 
-**Libraries**
+The project requires Python 3 and several Python libraries, including:
+
 - scikit-image
 - pandas
 - numpy
@@ -21,62 +22,31 @@ To install the project locally, read the follows instructions.
 - eyed3
 - pydub
 
-You can install this requirements with
-```
-$ pip3 install -r requirements.txt
-```
+You can install these requirements using pip:
+
+```bash
+pip3 install -r requirements.txt
+
 
 ## Usage
 
-To run the classifiers use:
+Running the Classifiers
+To run the classifiers, use the following command:
 
 ```
 python3 main.py -r
 ```
 
-To run the classifier with a new sample.wav use:
+To run the classifier with a new audio sample (in .wav format), use:
 
 ```
 python3 main.py -w path/file.wav
 ```
 
-**Note**: to convert any audio file into .wav file we recommend [SoundConverter](https://soundconverter.org/)
+Note: If you need to convert an audio file into .wav format, use [SoundConverter](https://soundconverter.org/).
 
-
-To run the classifier with a new sample use:
+Classifying a New CSV Sample
+To run the classifier with a new sample in CSV format, use:
 ```
 python3 main.py -i path/file.csv
 ```
-
-
-## Extract new csv samples
-
-### Install R and packages
-
-If you run Linux (debian-based) you can use the follows commands to install R and dependencies:
-```
-$ sudo apt install r-base
-$ sudo apt install gfortran libsndfile1-dev libfftw3-dev
-$ R
-```
-
-With the last command you just opened r, so you can run the follows command to install packages:
-```
-$ install.packages("tuneR", "seewave")
-$ q()
-```
-
-Note: **q()** is to close the "r console".
-
-### Run the script
-
-Fill the folder **"male"** and **"female"** in **R/** with wavfile with the related gender.
-
-Use **Rscript** to run the file **extract_feature.r** to generate a new file "my_voice.csv" (*backup it before generate the new one*).
-
-```
-Rscript extractor_feature.r
-```
-
-
----
